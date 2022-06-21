@@ -17,10 +17,10 @@ $(document).ready(function() {
                 "data": 'NOME',
                 "className": 'text-center'
             },
-            {
-                "data": 'CELULAR',
-                "className": 'text-center'
-            },
+            //{
+            //"data": 'CELULAR',
+            //"className": 'text-center'
+            //},
             {
                 "data": 'ID',
                 "orderable": false,
