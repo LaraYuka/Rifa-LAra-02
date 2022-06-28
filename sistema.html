@@ -12,20 +12,27 @@
     <link rel="stylesheet" href="css2.css">
 </head>
 
-<body>
-    <!-- <div class="container"> -->
-    <!-- <div class="row"> -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
+<body class="bg-white">
+    <div class="container">
+        <!-- <div class="row"> -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <!-- <div class="container"> -->
 
             <a class="navbar-brand" href="sistema.html">
                 <img src="img/img4.png" alt="e-rifas" width="50" height="50">
             </a>
-            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> -->
+            <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> -->
+            <!-- <div id="my-nav" class="collapse navbar-collapse"> -->
+            <!-- <div class="navbar-nav"> -->
+            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div id="my-nav" class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto ">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#"><i class="fa-solid fa-house"></i> Home</a>
                     </li>
@@ -44,11 +51,30 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#"><i class="fa-solid fa-award"></i> Premio</a>
                     </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Fundo
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <button class="dropdown-item btn escuro">Escuro</button>
+                            <button class="dropdown-item btn claro">Claro</button>
+                            <!-- <a class="dropdown-item btn escuro">Escuro</a>
+                            <a class="dropdown-item btn claro">Claro</a> -->
+                        </div>
+                    </li>
+
                 </ul>
+                <!--
+                <button class="btn bg-transparent botao-lua"><i class="fas fa-moon"></i></button>
+                <button class="btn bg-transparent botao-sol"><i class="fas fa-sun"></i></button>
+                -->
                 <a href="index.html" class="nav-link"><i class="fa-solid fa-right-from-bracket"></i>Sair</a>
             </div>
-            <!-- </div> -->
-        </div>
+    </div>
+    <!-- </div> -->
+    </div>
     </nav>
     <!-- </div>
 </div> -->
@@ -69,6 +95,7 @@
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/fundo.js"></script>
     <script src="libs/sweetAlert/dist/sweetalert2.all.js"></script>
     <script src="libs/DataTables/datatables.js"></script>
     <script src="libs/FontAwesome/js/all.js"></script>
