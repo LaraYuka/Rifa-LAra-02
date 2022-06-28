@@ -144,3 +144,8 @@ p {
 .show>.btn-personal.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(100, 0, 55, 0.5);
 }
+
+.cima {
+    z-index: 2;
+    position: absolute;
+}
