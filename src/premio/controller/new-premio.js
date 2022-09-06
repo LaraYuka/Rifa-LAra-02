@@ -5,10 +5,10 @@ $(document).ready(function() {
         $('.modal-title').empty()
 
 
-        $('.modal-title').append('Adicionar nova promocao')
+        $('.modal-title').append('Adicionar novo premio')
 
-        $('.modal-body').load('src/promocao/view/form-promocao.html', function() {
-            // Criar um ajax para buscar todos os tipos de promocaoes possiveis
+        $('.modal-body').load('src/premio/view/form-premio.html', function() {
+            // Criar um ajax para buscar todos os tipos de premioes possiveis
             $.ajax({
                 dataType: 'json',
                 type: 'POST',
@@ -26,11 +26,11 @@ $(document).ready(function() {
 
         $('.btn-save').attr('data-operation', 'insert')
 
-        $('#modal-promocao').modal('show')
+        $('#modal-premio').modal('show')
     })
 
     $('.close, #close').click(function(e) {
         e.preventDefault()
-        $('#modal-promocao').modal('hide')
+        $('#modal-premio').modal('hide')
     })
 })

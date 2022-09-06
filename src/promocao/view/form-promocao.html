@@ -5,27 +5,46 @@
     </div>
     <div class="form-group">
         <label>Descrição</label>
-        <input type="text" name="DESCRICAO" id="DESCRICAO" class="form-control">
+        <textarea type="text" name="DESCRICAO" id="DESCRICAO" class="form-control" cols="30" rows="2"></textarea>
     </div>
-    <div class="form-group">
-        <label>DATA_INICIO</label>
-        <input type="date" name="DATA_INICIO" id="DATA_INICIO" class="form-control">
+
+    <div class="form-group row">
+        <div class="col-12 col-sm-4 col-md-4">
+            <label>DATA_INICIO</label>
+            <input type="date" name="DATA_INICIO" id="DATA_INICIO" class="form-control">
+        </div>
+        <div class="col-12 col-sm-4 col-md-4">
+            <label>DATA_FIM</label>
+            <input type="date" name="DATA_FIM" id="DATA_FIM" class="form-control">
+        </div>
+        <div class="col-12 col-sm-4 col-md-4">
+            <label>DATA_SORTEIO</label>
+            <input type="date" name="DATA_SORTEIO" id="DATA_SORTEIO" class="form-control">
+        </div>
     </div>
-    <div class="form-group">
-        <label>DATA_FIM</label>
-        <input type="date" name="DATA_FIM" id="DATA_FIM" class="form-control">
-    </div>
-    <div class="form-group">
-        <label>DATA_SORTEIO</label>
-        <input type="date" name="DATA_SORTEIO" id="DATA_SORTEIO" class="form-control">
-    </div>
-    <div class="form-group">
-        <label>ARRECADAÇÃO</label>
-        <input type="text" name="ARRECADACAO" id="ARRECADACAO" class="form-control">
-    </div>
-    <div class="form-group">
-        <label>VALOR_RIFA</label>
-        <input type="text" name="VALOR_RIFA" id="VALOR_RIFA" class="form-control">
+
+    <div class="form-group row">
+        <div class="col-12 col-sm-4 col-md-4">
+            <label>ARRECADAÇÃO</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                </div>
+                <input type="number" name="ARRECADACAO" id="ARRECADACAO" class="form-control">
+            </div>
+        </div>
+
+
+        <div class="col-12 col-sm-4 col-md-4">
+            <label>VALOR_RIFA</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                </div>
+                <input type="number" name="VALOR_RIFA" id="VALOR_RIFA" class="form-control">
+            </div>
+        </div>
+
     </div>
 
     <!--

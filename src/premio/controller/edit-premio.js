@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('#table-promocao').on('click', 'button.btn-view', function(e) {
+    $('#table-promocao').on('click', 'button.btn-edit', function(e) {
 
         e.preventDefault()
 
@@ -22,28 +22,19 @@ $(document).ready(function() {
             success: function(dado) {
                 if (dado.tipo == "success") {
                     $('.modal-body').load('src/promocao/view/form-promocao.html', function() {
-                        $('#TITULO').val(dado.dados.TITULO)
-                        $('#TITULO').attr('readonly', 'true')
+
+                        $('#NOME').val(dado.dados.NOME)
+
 
                         $('#DESCRICAO').val(dado.dados.DESCRICAO)
-                        $('#DESCRICAO').attr('readonly', 'true')
 
-                        $('#DATA_INICIO').val(dado.dados.DATA_INICIO)
-                        $('#DATA_INICIO').attr('readonly', 'true')
-
-                        $('#DATA_FIM').val(dado.dados.DATA_FIM)
-                        $('#DATA_FIM').attr('readonly', 'true')
-
-                        $('#DATA_SORTEIO').val(dado.dados.DATA_SORTEIO)
-                        $('#DATA_SORTEIO').attr('readonly', 'true')
-
-                        $('#ARRECADACAO').val(dado.dados.ARRECADACAO)
-                        $('#ARRECADACAO').attr('readonly', 'true')
-
-                        $('#VALOR_RIFA').val(dado.dados.VALOR_RIFA)
-                        $('#VALOR_RIFA').attr('readonly', 'true')
+                        $('#VALOR').val(dado.dados.VALOR)
 
                         $('#TIPO_ID').empty()
+
+
+                        //$('#TIPO_ID').empty()
+                        $('#ID').val(dado.dados.ID)
 
                         var TIPO_ID = dado.dados.TIPO_ID
 
@@ -56,19 +47,21 @@ $(document).ready(function() {
                             success: function(dados) {
                                 for (const result of dados) {
                                     if (result.ID == TIPO_ID) {
-                                        $('#TIPO_ID').append(`<option value="${result.ID}">${result.TITULO}</option>`)
+                                        $('#TIPO_ID').append(`<option value="${result.ID}" selected>${result.NOME}</option>`)
+                                    } else {
+                                        $('#TIPO_ID').append(`<option value="${result.ID}">${result.NOME}</option>`)
                                     }
 
                                 }
                             }
                         })
-
                     })
-                    $('.btn-save').hide()
+                    $('.btn-save').removeAttr('data-operation', 'insert')
+                    $('.btn-save').show()
                     $('#modal-promocao').modal('show')
                 } else {
                     Swal.fire({ // Inicialização do SweetAlert
-                        title: 'e-Rifa', // Título da janela SweetAler
+                        title: 'Sistema de Rifas', // Título da janela SweetAlert
                         text: dado.mensagem, // Mensagem retornada do microserviço
                         type: dado.tipo, // promocao de retorno [success, info ou error]
                         confirmButtonText: 'OK'

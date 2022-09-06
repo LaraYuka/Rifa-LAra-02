@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('#table-promocao').on('click', 'button.btn-view', function(e) {
+    $('#table-premio').on('click', 'button.btn-view', function(e) {
 
         e.preventDefault()
 
@@ -18,30 +18,18 @@ $(document).ready(function() {
             dataType: 'json',
             assync: true,
             data: ID,
-            url: 'src/promocao/model/view-promocao.php',
+            url: 'src/premio/model/view-premio.php',
             success: function(dado) {
                 if (dado.tipo == "success") {
-                    $('.modal-body').load('src/promocao/view/form-promocao.html', function() {
-                        $('#TITULO').val(dado.dados.TITULO)
-                        $('#TITULO').attr('readonly', 'true')
+                    $('.modal-body').load('src/premio/view/form-premio.html', function() {
+                        $('#NOME').val(dado.dados.NOME)
+                        $('#NOME').attr('readonly', 'true')
 
                         $('#DESCRICAO').val(dado.dados.DESCRICAO)
                         $('#DESCRICAO').attr('readonly', 'true')
 
-                        $('#DATA_INICIO').val(dado.dados.DATA_INICIO)
-                        $('#DATA_INICIO').attr('readonly', 'true')
-
-                        $('#DATA_FIM').val(dado.dados.DATA_FIM)
-                        $('#DATA_FIM').attr('readonly', 'true')
-
-                        $('#DATA_SORTEIO').val(dado.dados.DATA_SORTEIO)
-                        $('#DATA_SORTEIO').attr('readonly', 'true')
-
-                        $('#ARRECADACAO').val(dado.dados.ARRECADACAO)
-                        $('#ARRECADACAO').attr('readonly', 'true')
-
-                        $('#VALOR_RIFA').val(dado.dados.VALOR_RIFA)
-                        $('#VALOR_RIFA').attr('readonly', 'true')
+                        $('#VALOR').val(dado.dados.VALOR)
+                        $('#VALOR').attr('readonly', 'true')
 
                         $('#TIPO_ID').empty()
 
@@ -56,7 +44,7 @@ $(document).ready(function() {
                             success: function(dados) {
                                 for (const result of dados) {
                                     if (result.ID == TIPO_ID) {
-                                        $('#TIPO_ID').append(`<option value="${result.ID}">${result.TITULO}</option>`)
+                                        $('#TIPO_ID').append(`<option value="${result.ID}">${result.NOME}</option>`)
                                     }
 
                                 }
@@ -65,12 +53,12 @@ $(document).ready(function() {
 
                     })
                     $('.btn-save').hide()
-                    $('#modal-promocao').modal('show')
+                    $('#modal-premio').modal('show')
                 } else {
                     Swal.fire({ // Inicialização do SweetAlert
                         title: 'e-Rifa', // Título da janela SweetAler
                         text: dado.mensagem, // Mensagem retornada do microserviço
-                        type: dado.tipo, // promocao de retorno [success, info ou error]
+                        type: dado.tipo, // premio de retorno [success, info ou error]
                         confirmButtonText: 'OK'
                     })
                 }
