@@ -43,11 +43,12 @@ $(document).ready(function() {
                         $('#VALOR_RIFA').val(dado.dados.VALOR_RIFA)
                         $('#VALOR_RIFA').attr('readonly', 'true')
 
-                        $('#TIPO_ID').empty()
+                        //$('#TIPO_ID').empty()
 
-                        var TIPO_ID = dado.dados.TIPO_ID
+                        //var TIPO_ID = dado.dados.TIPO_ID
 
                         //Consultar todos os tipos cadastrados no banco de daods
+                        /** 
                         $.ajax({
                             dataType: 'json',
                             type: 'POST',
@@ -61,7 +62,7 @@ $(document).ready(function() {
 
                                 }
                             }
-                        })
+                        }) */
 
                     })
                     $('.btn-save').hide()

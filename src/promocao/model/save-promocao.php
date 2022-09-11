@@ -51,13 +51,13 @@
                 $stmt->execute(array(
                     ':id' => $ID,
                      //':a' => utf8_decode($requestData['NOME'])
-                    ':a' => $requestData['TITULO'],
-                    ':b' => $requestData['DESCRICAO'],
-                    ':c' => $requestData['DATA_INICIO'],
-                    ':d' => $requestData['DATA_FIM'],
-                    ':e' => $requestData['DATA_SORTEIO'],
-                    ':f' => $requestData['ARRECADACAO'],
-                    ':g' => $requestData['VALOR_RIFA'],
+                    ':a' => ($requestData['TITULO']),
+                    ':b' => ($requestData['DESCRICAO']),
+                    ':c' => ($requestData['DATA_INICIO']),
+                    ':d' => ($requestData['DATA_FIM']),
+                    ':e' => ($requestData['DATA_SORTEIO']),
+                    ':f' => ($requestData['ARRECADACAO']),
+                    ':g' => ($requestData['VALOR_RIFA']),
                     //':h' => $requestData['TIPO_ID']
                 ));
                 $dados = array(

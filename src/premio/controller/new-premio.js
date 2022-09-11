@@ -13,10 +13,10 @@ $(document).ready(function() {
                 dataType: 'json',
                 type: 'POST',
                 assync: true,
-                url: 'src/tipo/model/all-tipo.php',
+                url: 'src/promocao/model/all-promocao.php',
                 success: function(dados) {
                     for (const result of dados) {
-                        $('#TIPO_ID').append(`<option value="${result.ID}">${result.NOME}</option>`)
+                        $('#PROMOCAO_ID').append(`<option value="${result.ID}">${result.TITULO}</option>`)
                     }
                 }
             })

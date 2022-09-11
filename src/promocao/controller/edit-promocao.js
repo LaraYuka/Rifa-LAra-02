@@ -47,9 +47,10 @@ $(document).ready(function() {
                         //$('#TIPO_ID').empty()
                         $('#ID').val(dado.dados.ID)
 
-                        var TIPO_ID = dado.dados.TIPO_ID
+                        //var TIPO_ID = dado.dados.TIPO_ID
 
                         //Consultar todos os tipos cadastrados no banco de daods
+                        /** 
                         $.ajax({
                             dataType: 'json',
                             type: 'POST',
@@ -65,7 +66,7 @@ $(document).ready(function() {
 
                                 }
                             }
-                        })
+                        }) */
                     })
                     $('.btn-save').removeAttr('data-operation', 'insert')
                     $('.btn-save').show()

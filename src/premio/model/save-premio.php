@@ -22,14 +22,14 @@
         if($operacao == 'insert'){
             // Prepara o comando INSERT para ser executado
             try{
-                $stmt = $pdo->prepare('INSERT INTO PREMIO (NOME, DESCRICAO, VALOR) VALUES (:a, :b, :c, :d)');
+                $stmt = $pdo->prepare('INSERT INTO PREMIO (NOME, DESCRICAO, VALOR, PROMOCAO_ID) VALUES (:a, :b, :c, :d)');
                 $stmt->execute(array(
                     //':a' => utf8_decode($requestData['NOME'])
                     ':a' => $requestData['NOME'],
                     ':b' => $requestData['DESCRICAO'],
                     ':c' => $requestData['VALOR'],
-                    ':d' => $requestData['TIPO_ID']
-                    //':h' => $requestData['TIPO_ID']
+                    ':d' => $requestData['PROMOCAO_ID']
+                    //':h' => $requestData['PROMOCAO_ID']
                 ));
                 $dados = array(
                     "tipo" => 'success',
@@ -44,15 +44,15 @@
         } else {
             // Se minha variável operação estiver vazia então devo gerar os scripts de update
             try{
-                $stmt = $pdo->prepare('UPDATE PREMIO SET NOME = :a, DESCRICAO = :b, VALOR = :c, TIPO_ID = :d WHERE ID = :id');
+                $stmt = $pdo->prepare('UPDATE PREMIO SET NOME = :a, DESCRICAO = :b, VALOR = :c, PROMOCAO_ID = :d WHERE ID = :id');
                 $stmt->execute(array(
                     ':id' => $ID,
                      //':a' => utf8_decode($requestData['NOME'])
                     ':a' => $requestData['NOME'],
                     ':b' => $requestData['DESCRICAO'],
                     ':c' => $requestData['VALOR'],
-                    ':d' => $requestData['TIPO_ID']
-                    //':h' => $requestData['TIPO_ID']
+                    ':d' => $requestData['PROMOCAO_ID']
+                    //':h' => $requestData['PROMOCAO_ID']
                 ));
                 $dados = array(
                     "tipo" => 'success',

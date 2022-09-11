@@ -17,10 +17,10 @@ $(document).ready(function() {
                 "data": 'NOME',
                 "className": 'text-center'
             },
-            {
+            /*{
                 "data": 'DESCRICAO',
                 "className": 'text-center'
-            },
+            }, **/
             {
                 "data": 'VALOR',
                 "className": 'text-center'

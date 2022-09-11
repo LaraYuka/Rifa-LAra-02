@@ -17,14 +17,17 @@ $(document).ready(function() {
                 "data": 'TITULO',
                 "className": 'text-center'
             },
-            {
+
+            /*{
                 "data": 'DESCRICAO',
                 "className": 'text-center'
-            },
+            }, **/
+
             {
                 "data": 'DATA_INICIO',
                 "className": 'text-center'
             },
+            /*
             {
                 "data": 'DATA_FIM',
                 "className": 'text-center'
@@ -40,7 +43,7 @@ $(document).ready(function() {
             {
                 "data": 'VALOR_RIFA',
                 "className": 'text-center'
-            },
+            }, **/
             //{
             //"data": 'CELULAR',
             //"className": 'text-center'
